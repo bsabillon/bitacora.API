@@ -68,6 +68,8 @@ namespace bitacora.API.Controllers
         [HttpPost]
         public async Task<ActionResult<Actividad>>PostActividad(Actividad item)
         {
+
+            
             _context.Actividades.Add(item);
             await _context.SaveChangesAsync();
             return item;

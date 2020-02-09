@@ -39,6 +39,9 @@ namespace bitacora.API.Controllers
         [HttpPost]
         public async Task<ActionResult<Category>>PostCategory(Category item)
         {
+
+            
+
             _context.Categories.Add(item);
             await _context.SaveChangesAsync();
             return CreatedAtAction(nameof(GetCategory), new { Id = item.id }, item);
